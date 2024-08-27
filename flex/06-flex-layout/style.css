@@ -5,6 +5,40 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content{
+  flex: 1; /* This will make the content take the remaining space
+  I used justify-content: space-between how is this approach better than what I did as both achieve the result? */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+ul{
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(136,136,136);
+  font-weight: 505;
+}
+
+.header,
+.footer{
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
 }
 
 img {
@@ -14,8 +48,9 @@ img {
 button {
   font-family: Roboto, sans-serif;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   background: #eee;
+  padding: 8px 16px;
 }
 
 input {
@@ -24,3 +59,12 @@ input {
   padding: 8px 24px;
   width: 400px;
 }
+
+.footer{
+  background: #eeeeee;
+}
+
+
+/* NOTE:
+Remember that whenever ul is present set the margin and padding to 0. and then change the padding of the header or footer to get the nav bar effect. */
+
