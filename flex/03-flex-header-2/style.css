@@ -12,6 +12,9 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .profile-image {
@@ -20,6 +23,7 @@ body {
   border-radius: 50%;
   width: 48px;
   height: 48px;
+  margin: 8px;
 }
 
 .logo {
@@ -27,6 +31,7 @@ body {
   font-size: 32px;
   font-weight: 900;
   font-style: italic;
+  margin: 8px;
 }
 
 button {
@@ -35,6 +40,7 @@ button {
   background: rebeccapurple;
   color: white;
   padding: 8px 24px;
+  align-self: center;
 }
 
 a {
@@ -45,4 +51,36 @@ a {
 
 ul {
   list-style-type: none;
+  display: flex;
+  gap: 16px;
+  align-self: center;
+  margin: 8px;
+  padding: 0px;
 }
+
+.left,
+.right{
+  display: flex;
+}
+
+
+/* SOLUTION */
+
+/* .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px; This was a better approach as in this the logo wouldn't have to be adjusted the padding would deal with the spacing
+}
+
+ul {
+  display: flex;
+  margin: 0; By making th margin and padding 0 we are completely dependent on the margins and paddings of the .left and .right classes
+  padding: 0;
+  gap: 16px;
+}
+
+.left, .right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+} */
