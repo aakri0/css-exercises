@@ -20,6 +20,26 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.element{
+  display: flex;
+  justify-content: space-between;
+}
+
+.element.cc{
+  display: flex;
+  justify-content: flex-start;
+  gap: 4px;
 }
 
 .icon {
@@ -33,6 +53,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .close-button {
@@ -48,6 +69,10 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
+}
+
+.text{  
+  margin-bottom: 16px;
 }
 
 button {
@@ -67,3 +92,30 @@ button.cancel {
   border: 1px solid #ddd;
   color: royalblue;
 }
+
+/* Solution:
+My own solution also works this is just the best possible and intended solution. Need to learn from this.
+
+.modal {
+  display: flex;
+  gap: 16px; This is a better approach could not think of it. This avoids adding a lot of stuff into the classes for each and every element
+  padding: 16px;
+}
+
+.icon {
+  this keeps the icon from getting smashed by the text 
+  flex-shrink: 0;
+}
+header container should be wrapped around the button element as well in order for flex style to work 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.text {
+  margin-bottom: 16px;
+} */
